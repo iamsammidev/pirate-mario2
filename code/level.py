@@ -6,6 +6,12 @@ import settings
 
 
 class Level:
+    pass
+
+
+
+# OLD VERSION
+class Level_old:
     def __init__(self, level_data, surface):
 
         # level setup
