@@ -2,13 +2,19 @@ import pygame
 from tiles import Tile
 from player import Player
 from particles import ParticleEffect
+from support import import_csv_layout
 import settings
 
 
 class Level:
-    pass
+    def __init__(self, level_data, surface):
+        self.display_surface = surface
 
+        terrain_layout = import_csv_layout(level_data['terrain'])
 
+    def run(self):
+        # run the entire game / level
+        pass
 
 # OLD VERSION
 class Level_old:

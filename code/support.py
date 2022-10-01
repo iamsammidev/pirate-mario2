@@ -2,7 +2,7 @@ from csv import reader
 from settings import tile_size
 from os import walk
 import pygame
-
+import csv
 
 def import_folder(path):
     surface_list = []
