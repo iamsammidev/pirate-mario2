@@ -93,7 +93,7 @@ class Player(pygame.sprite.Sprite):
             self.facing_right = True
         elif keys[pygame.K_LEFT]:
             self.direction.x = -1
-            sfelf.facing_right = False
+            self.facing_right = False
         else:
             self.direction.x = 0
 
