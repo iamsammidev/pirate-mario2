@@ -5,7 +5,8 @@ from player import Player
 from particles import ParticleEffect
 from support import import_csv_layout, import_cut_graphics
 import settings
-from settings import tile_size
+from settings import tile_size, screen_height
+from decoration import Sky, Water, Clouds
 
 
 class Level:
@@ -51,6 +52,12 @@ class Level:
         # constraint_layout
         constraint_layout = import_csv_layout(level_data['constraints'])
         self.constraint_sprites = self.create_tile_group(constraint_layout, 'constraint')
+
+        # decoration
+        self.sky = Sky(8)
+        level_width = len(terrain_layout[0]) * tile_size
+        self.water = Water(screen_height - 20, level_width)
+        self.clouds = Clouds(400, level_width, 30)
 
     def create_tile_group(self, layout, type):
         sprite_group = pygame.sprite.Group()
@@ -104,7 +111,7 @@ class Level:
                 x = col_index * tile_size
                 y = row_index * tile_size
                 if val == '0':
-                   print('player goes here')
+                    print('player goes here')
                 if val == '1':
                     hat_surface = pygame.image.load('../graphics/character/hat.png').convert_alpha()
                     sprite = StaticTile(tile_size, x, y, hat_surface)
@@ -116,6 +123,10 @@ class Level:
 
     def run(self):
         # run the entire game / level
+
+        # sky
+        self.sky.draw(self.display_surface)
+        self.clouds.draw(self.display_surface, self.world_shift)
 
         # background palms
         self.bg_palm_sprites.update(self.world_shift)
@@ -151,6 +162,8 @@ class Level:
         self.goal.update(self.world_shift)
         self.goal.draw(self.display_surface)
 
+        # water
+        self.water.draw(self.display_surface, self.world_shift)
 
 # OLD VERSION
 class Level_old:

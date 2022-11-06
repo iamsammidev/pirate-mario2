@@ -10,6 +10,7 @@ screen = pygame.display.set_mode((settings.screen_width, settings.screen_height)
 clock = pygame.time.Clock()
 # level = Level(settings.level_map, screen)
 level = Level(level_0, screen)
+pygame.display.set_caption('Super Mario World v.01')
 
 while True:
     for event in pygame.event.get():
