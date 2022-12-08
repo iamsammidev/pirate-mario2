@@ -3,13 +3,23 @@ import sys
 import settings
 from level import Level
 from overworld import Overworld
-
+from ui import UI
 
 class Game:
     def __init__(self):
-        self.max_level = 2
-        self.overworld = Overworld(1, self.max_level, screen, self.create_level)
+
+        # game attributes
+        self.max_level = 0
+        self.max_health = 100
+        self.cur_health = 100
+        self.coins = 0
+
+        # overworld creation
+        self.overworld = Overworld(0, self.max_level, screen, self.create_level)
         self.status = 'overworld'
+
+        # user interface
+        self.ui = UI(screen)
 
     def create_level(self, current_level):
         self.level = Level(current_level, screen, self.create_overworld)
@@ -26,13 +36,15 @@ class Game:
             self.overworld.run()
         else:
             self.level.run()
+            self.ui.show_health(self.cur_health, self.max_health)
+            self.ui.show_coins(self.coins)
 
 
 pygame.init()
 screen = pygame.display.set_mode((settings.screen_width, settings.screen_height))
 clock = pygame.time.Clock()
 game = Game()
-pygame.display.set_caption('Super Mario World v.02')
+pygame.display.set_caption('Super Mario World betta v.0.0.1')
 
 while True:
     for event in pygame.event.get():
@@ -40,7 +52,6 @@ while True:
             pygame.quit()
             sys.exit()
 
-    screen.fill('black')
     game.run()
     pygame.display.update()
     clock.tick(settings.fps)
