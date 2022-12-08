@@ -286,7 +286,6 @@ class Level:
         self.fg_palm_sprites.update(self.world_shift)
         self.fg_palm_sprites.draw(self.display_surface)
 
-
         # player sprites
         self.player.update()
         self.horizontal_movement_collision()
