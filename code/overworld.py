@@ -19,7 +19,7 @@ class Node(pygame.sprite.Sprite):
         self.detection_zone = pygame.Rect(self.rect.centerx-(icon_speed/5), self.rect.centery-(icon_speed/5), icon_speed, icon_speed)
 
     def animate(self):
-        self.frame_index += 0.15
+        self.frame_index += 0.025
         if self.frame_index >= len(self.frames):
             self.frame_index = 0
         self.image = self.frames[int(self.frame_index)]
@@ -29,7 +29,7 @@ class Node(pygame.sprite.Sprite):
             self.animate()
         else:
             tint_surf = self.image.copy()
-            tint_surf.fill('black', None, pygame.BLEND_RGB_MULT)
+            tint_surf.fill('white', None, pygame.BLEND_RGB_MULT)
             self.image.blit(tint_surf, (0, 0))
 
 
