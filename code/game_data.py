@@ -52,7 +52,7 @@ level_3 = {
         'node_graphics': '../graphics/overworld/3',
         'unlock': 4}
 level_4 = {
-        'terrain': '../levels/4/level4_terrain.csv',
+        'terrain': '../levels/4/level_4_terrain.csv',
         'coins': '../levels/4/level_4_coins.csv',
         'fg palms': '../levels/4/level_4_fg_palms.csv',
         'bg palms': '../levels/4/level_4_bg_palms.csv',
