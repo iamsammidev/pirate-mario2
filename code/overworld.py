@@ -3,7 +3,6 @@ from game_data import levels
 from support import import_folder
 from decoration import Sky
 
-
 class Node(pygame.sprite.Sprite):
     def __init__(self, pos, status, icon_speed, path):
         super().__init__()
@@ -66,7 +65,7 @@ class Overworld:
         # time
         self.start_time = pygame.time.get_ticks()
         self.allow_input = False
-        self.timer_length = 300
+        self.timer_length = 5
 
     def setup_nodes(self):
         self.nodes = pygame.sprite.Group()

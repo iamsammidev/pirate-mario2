@@ -9,7 +9,7 @@
  <tileset firstgid="21" source="../tilesets/player_tiles.tsx"/>
  <tileset firstgid="23" source="../tilesets/grass_tiles.tsx"/>
  <tileset firstgid="28" source="../tilesets/coin_tiles.tsx"/>
- <tileset firstgid="30" source="../1/terrain_tiles.tsx"/>
+ <tileset firstgid="30" source="../tilesets/terrain_tiles_.tsx"/>
  <tileset firstgid="46" source="../tilesets/enemy_tiles.tsx"/>
  <layer id="5" name="bg_palms" width="180" height="11" locked="1">
   <data encoding="csv">

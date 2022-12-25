@@ -3,7 +3,7 @@
  <editorsettings>
   <export target="../4/level_4.csv" format="csv"/>
  </editorsettings>
- <tileset firstgid="1" source="../1/terrain_tiles.tsx"/>
+ <tileset firstgid="1" source="../tilesets/terrain_tiles.tsx"/>
  <tileset firstgid="17" source="../tilesets/player_tiles.tsx"/>
  <tileset firstgid="19" source="../tilesets/creates_.tsx"/>
  <tileset firstgid="20" source="../tilesets/palms.tsx"/>
