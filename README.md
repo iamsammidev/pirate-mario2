@@ -1,6 +1,6 @@
-#Марио - это увлекательная игра для всех возрастов
+# Марио - это увлекательная игра для всех возрастов
 
-##Версия Python 3.9.5 
+## Версия Python 3.9.5 
 [скачать для Windows installer (64-bit)](https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe)
 
 [скачать для Windows installer (32-bit)](https://www.python.org/ftp/python/3.9.5/python-3.9.5.exe)
