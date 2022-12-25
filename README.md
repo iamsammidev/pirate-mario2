@@ -7,6 +7,14 @@
 
 Скачиваем и устанавлеваем Python
 
+Клонируем проект:
+
+ [Страница проекта](https://github.com/iamsammidev/pirate-mario2)
+
+```shell
+git clone https://github.com/iamsammidev/pirate-mario2.git
+```
+
 Установка зависимостей. Открываем командную строку и вводим следующую команду:
 
 ```shell
