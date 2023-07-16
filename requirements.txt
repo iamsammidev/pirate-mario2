@@ -1,2 +1,1 @@
-# python = 3.9.5
-pygame==2.1.2
+pygame==2.4.0
